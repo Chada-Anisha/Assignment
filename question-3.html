@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #b799f5;
+        margin-top: 350px;
+        margin-left: 720px;
+        }
+        h1 {
+            color: white;
+        }
+        button {
+            background-color: rgb(174, 97, 247);
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-top: 20px;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="head">
+            <h1>PATTERN PRINTER</h1>
+            <label for="inputNumber">Enter a number :</label>
+            <input type="number" id="numInput">
+        </div>
+        <div class="button">
+            <button onclick="printPattern()">Print Pattern</button>
+            <div id="patternResult"></div>
+
+        </div>
+    </div>
+
+    <script>
+        function printPattern(){
+            const inputValue = document.getElementById("numInput").value;
+            const n = Number(inputValue);
+
+            let pattern = "";
+        for (let i = 1; i <= n; i++) {
+            let stars = "";
+            for (let j=1; j<=i; j++){
+            stars = stars + "* "
+
+            }
+            pattern = pattern + stars + "\n";
+
+        }
+         document.getElementById("patternResult").innerText = pattern;
+        }
+    </script>
+</body>
+</html>
